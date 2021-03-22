@@ -7,6 +7,7 @@ class Agent(models.Model):
     description = models.TextField(blank=True)
     phone = models.CharField(max_length=20)
     email = models.CharField(max_length=15)
+    agent_of_month = models.BooleanField(default=0)
     hired_on = models.DateTimeField(default=datetime.now, blank=True)
     def __str__(self):
         return self.name
